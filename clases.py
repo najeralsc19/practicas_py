@@ -21,3 +21,15 @@ print(Usuario.username)
 
 
 #atributos de instancia 
+
+class User:
+    username = "Usuario por default"
+    email = ""
+
+#__dict__ 
+user1 = User()
+#1.- verifica si el atributo existe denro del objeto
+#2.- 
+print(user1.username)
+
+print(user1.__dict__)
