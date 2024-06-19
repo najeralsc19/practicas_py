@@ -1,3 +1,8 @@
+class SerVivo:
+    def dormir(self):
+        print('El ser duerme')
+
+
 class Animal(): #clase padre
 
     def comer(self):
@@ -7,7 +12,9 @@ class Animal(): #clase padre
         print('el animal duerme')
 
 class Mascota(Animal): #clase padre
-    pass
+    
+    def comer(self):
+        print('la mascota come')
 
 
 class Felino: #clase hija
@@ -16,12 +23,19 @@ class Felino: #clase hija
         print('El felino caza')
 
 
-class Gato(Mascota, Felino): #clase hija
+class Gato(SerVivo, Mascota, Felino): #clase hija
     def __init__(self, nombre):
         self.nombre = nombre
+    
+    def comer(self):
+        super().comer()
+        print(f'{self.nombre} come')
 
 
 
-patricio
+patricio = Gato('Patricio')
+patricio.comer()
+patricio.dormir()
+patricio.cazar()
 
 
