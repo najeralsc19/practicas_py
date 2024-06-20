@@ -1,0 +1,11 @@
+
+    >>> from main import palindromo
+    >>> palindromo('anita lava la tina')
+    True
+
+    >>> palindromo('acodigo')
+    False
+
+    >>> sentence = 'oso'
+    >>> palindromo(sentence)
+    True
